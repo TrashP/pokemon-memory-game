@@ -1,0 +1,9 @@
+#app, #header, #root {
+    height: 100%;
+}
+
+#title {
+    background-color: rgb(240, 0, 0);
+    border-bottom: 20px solid rgb(60, 60, 61);
+    height: 20%;
+}
