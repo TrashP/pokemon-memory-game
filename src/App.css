@@ -1,9 +1,38 @@
-#app, #header, #root {
+#app, #root {
     height: 100%;
+}
+
+#header {
+    height: 20%;
 }
 
 #title {
     background-color: rgb(240, 0, 0);
     border-bottom: 20px solid rgb(60, 60, 61);
-    height: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#circle {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 5px solid rgb(60, 60, 61);
+    background-color: rgb(240, 240, 240);
+    position: relative;
+    left: 50vw;
+    bottom: 3.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#incircle {
+    height: 27px;
+    width: 27px;
+    border-radius: 50%;
+    border: 3px solid rgb(60, 60, 61);
+    background-color: rgb(240, 240, 240);
 }
