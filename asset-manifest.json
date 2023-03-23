@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/pokemon-memory-game/static/css/main.c016de97.css",
-    "main.js": "/pokemon-memory-game/static/js/main.dbfe8946.js",
+    "main.css": "/pokemon-memory-game/static/css/main.fa93d90d.css",
+    "main.js": "/pokemon-memory-game/static/js/main.225adc1b.js",
     "static/js/787.da65a304.chunk.js": "/pokemon-memory-game/static/js/787.da65a304.chunk.js",
+    "static/media/title.png": "/pokemon-memory-game/static/media/title.1b07ef6a73c0e48f2683.png",
     "index.html": "/pokemon-memory-game/index.html",
-    "main.c016de97.css.map": "/pokemon-memory-game/static/css/main.c016de97.css.map",
-    "main.dbfe8946.js.map": "/pokemon-memory-game/static/js/main.dbfe8946.js.map",
+    "main.fa93d90d.css.map": "/pokemon-memory-game/static/css/main.fa93d90d.css.map",
+    "main.225adc1b.js.map": "/pokemon-memory-game/static/js/main.225adc1b.js.map",
     "787.da65a304.chunk.js.map": "/pokemon-memory-game/static/js/787.da65a304.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c016de97.css",
-    "static/js/main.dbfe8946.js"
+    "static/css/main.fa93d90d.css",
+    "static/js/main.225adc1b.js"
   ]
 }
