@@ -1,2 +1,0 @@
-body{height:100vh;margin:0}#app,#root{height:100%}#header{height:20%}#title{background-color:#f00000;border-bottom:20px solid #3c3c3d;height:100%}#circle,#title{align-items:center;display:flex;justify-content:center}#circle{border:5px solid #3c3c3d;border-radius:50%;bottom:3.5vh;height:40px;left:50vw;position:relative;width:40px}#circle,#incircle{background-color:#f0f0f0}#incircle{border:3px solid #3c3c3d;border-radius:50%;height:27px;width:27px}
-/*# sourceMappingURL=main.fa93d90d.css.map*/

@@ -1,16 +1,28 @@
 {
   "files": {
-    "main.css": "/pokemon-memory-game/static/css/main.fa93d90d.css",
-    "main.js": "/pokemon-memory-game/static/js/main.225adc1b.js",
+    "main.css": "/pokemon-memory-game/static/css/main.a76cc876.css",
+    "main.js": "/pokemon-memory-game/static/js/main.8a6bfbe4.js",
     "static/js/787.da65a304.chunk.js": "/pokemon-memory-game/static/js/787.da65a304.chunk.js",
+    "static/media/ivysaur.png": "/pokemon-memory-game/static/media/ivysaur.77433da79162d4d0dff2.png",
+    "static/media/venasaur.png": "/pokemon-memory-game/static/media/venasaur.5d77f7682ca6caecdf05.png",
+    "static/media/dragonite.png": "/pokemon-memory-game/static/media/dragonite.8d1c889ca1fffc201246.png",
+    "static/media/charizard.png": "/pokemon-memory-game/static/media/charizard.ef898daae7c21463d322.png",
+    "static/media/squirtle.png": "/pokemon-memory-game/static/media/squirtle.1fb21b7469fe8d620818.png",
+    "static/media/charmander.png": "/pokemon-memory-game/static/media/charmander.b2fae0377f165f639ecc.png",
+    "static/media/bulbasaur.png": "/pokemon-memory-game/static/media/bulbasaur.00f485972eb858c7d457.png",
+    "static/media/dratini.png": "/pokemon-memory-game/static/media/dratini.70057d532ee660627cc8.png",
+    "static/media/dragonair.png": "/pokemon-memory-game/static/media/dragonair.3dd89358e81659f1d331.png",
+    "static/media/wartortle.png": "/pokemon-memory-game/static/media/wartortle.e1d586e82b4d1db25d0b.png",
+    "static/media/charmeleon.png": "/pokemon-memory-game/static/media/charmeleon.1f8064f147080a0d274b.png",
+    "static/media/blastoise.png": "/pokemon-memory-game/static/media/blastoise.0c2ff7ddd76eb8951a47.png",
     "static/media/title.png": "/pokemon-memory-game/static/media/title.1b07ef6a73c0e48f2683.png",
     "index.html": "/pokemon-memory-game/index.html",
-    "main.fa93d90d.css.map": "/pokemon-memory-game/static/css/main.fa93d90d.css.map",
-    "main.225adc1b.js.map": "/pokemon-memory-game/static/js/main.225adc1b.js.map",
+    "main.a76cc876.css.map": "/pokemon-memory-game/static/css/main.a76cc876.css.map",
+    "main.8a6bfbe4.js.map": "/pokemon-memory-game/static/js/main.8a6bfbe4.js.map",
     "787.da65a304.chunk.js.map": "/pokemon-memory-game/static/js/787.da65a304.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa93d90d.css",
-    "static/js/main.225adc1b.js"
+    "static/css/main.a76cc876.css",
+    "static/js/main.8a6bfbe4.js"
   ]
 }
