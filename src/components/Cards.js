@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Pokemon from './Pokemon';
 import bulbasaur from '../images/bulbasaur.png';
 import ivysaur from '../images/ivysaur.png';
 import venasaur from '../images/venasaur.png';
@@ -13,35 +14,133 @@ import dragonair from '../images/dragonair.png';
 import dragonite from '../images/dragonite.png';
 
 const Cards = () => {
+	const [score, setScore] = useState(0);
+	const [best, setBest] = useState(0);
+
+	const incrementScore = () => {
+		setScore(score + 1);
+	};
+
+	const resetScore = () => {
+		setScore(0);
+	};
+
 	return (
 		<div id="cards">
 			<div id="scores">
-				<div id="currentScore">Current score: </div>
-				<div id="bestScore">Best score: </div>
+				<div id="currentScore">Current score: {score}</div>
+				<div id="bestScore">Best score: {best}</div>
 			</div>
 			<div id="gameBoard">
-				<Pokemon name="Bulbasaur" src={bulbasaur} />
-				<Pokemon name="Ivysaur" src={ivysaur} />
-				<Pokemon name="Venasaur" src={venasaur} />
-				<Pokemon name="Squirtle" src={squirtle} />
-				<Pokemon name="Wartortle" src={wartortle} />
-				<Pokemon name="Blastoise" src={blastoise} />
-				<Pokemon name="Charmander" src={charmander} />
-				<Pokemon name="Charmeleon" src={charmeleon} />
-				<Pokemon name="Charizard" src={charizard} />
-				<Pokemon name="Dratini" src={dratini} />
-				<Pokemon name="Dragonair" src={dragonair} />
-				<Pokemon name="Dragonite" src={dragonite} />
+				<Pokemon
+					name="Bulbasaur"
+					src={bulbasaur}
+					incrementScore={incrementScore}
+					resetScore={resetScore}
+					score={score}
+					best={best}
+					setBest={setBest}
+				/>
+				<Pokemon
+					name="Ivysaur"
+					src={ivysaur}
+					incrementScore={incrementScore}
+					resetScore={resetScore}
+					score={score}
+					best={best}
+					setBest={setBest}
+				/>
+				<Pokemon
+					name="Venasaur"
+					src={venasaur}
+					incrementScore={incrementScore}
+					resetScore={resetScore}
+					score={score}
+					best={best}
+					setBest={setBest}
+				/>
+				<Pokemon
+					name="Squirtle"
+					src={squirtle}
+					incrementScore={incrementScore}
+					resetScore={resetScore}
+					score={score}
+					best={best}
+					setBest={setBest}
+				/>
+				<Pokemon
+					name="Wartortle"
+					src={wartortle}
+					incrementScore={incrementScore}
+					resetScore={resetScore}
+					score={score}
+					best={best}
+					setBest={setBest}
+				/>
+				<Pokemon
+					name="Blastoise"
+					src={blastoise}
+					incrementScore={incrementScore}
+					resetScore={resetScore}
+					score={score}
+					best={best}
+					setBest={setBest}
+				/>
+				<Pokemon
+					name="Charmander"
+					src={charmander}
+					incrementScore={incrementScore}
+					resetScore={resetScore}
+					score={score}
+					best={best}
+					setBest={setBest}
+				/>
+				<Pokemon
+					name="Charmeleon"
+					src={charmeleon}
+					incrementScore={incrementScore}
+					resetScore={resetScore}
+					score={score}
+					best={best}
+					setBest={setBest}
+				/>
+				<Pokemon
+					name="Charizard"
+					src={charizard}
+					incrementScore={incrementScore}
+					resetScore={resetScore}
+					score={score}
+					best={best}
+					setBest={setBest}
+				/>
+				<Pokemon
+					name="Dratini"
+					src={dratini}
+					incrementScore={incrementScore}
+					resetScore={resetScore}
+					score={score}
+					best={best}
+					setBest={setBest}
+				/>
+				<Pokemon
+					name="Dragonair"
+					src={dragonair}
+					incrementScore={incrementScore}
+					resetScore={resetScore}
+					score={score}
+					best={best}
+					setBest={setBest}
+				/>
+				<Pokemon
+					name="Dragonite"
+					src={dragonite}
+					incrementScore={incrementScore}
+					resetScore={resetScore}
+					score={score}
+					best={best}
+					setBest={setBest}
+				/>
 			</div>
-		</div>
-	);
-};
-
-const Pokemon = (props) => {
-	return (
-		<div id={props.name} className="pokemon">
-			<img className="pokemonImage" src={props.src} alt="pokemon" />
-			<div className="pokemonName">{props.name}</div>
 		</div>
 	);
 };
