@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Pokemon from './Pokemon';
 import bulbasaur from '../images/bulbasaur.png';
 import ivysaur from '../images/ivysaur.png';
@@ -16,13 +16,51 @@ import dragonite from '../images/dragonite.png';
 const Cards = () => {
 	const [score, setScore] = useState(0);
 	const [best, setBest] = useState(0);
+	const [clickedArray, setClickedArray] = useState([]);
 
-	const incrementScore = () => {
-		setScore(score + 1);
+	useEffect(() => {
+		if (score > best) setBest(score);
+	}, [score, best]);
+
+	const pokemonArray = [
+		{ name: 'Bulbasaur', src: bulbasaur },
+		{ name: 'Ivysaur', src: ivysaur },
+		{ name: 'Venasaur', src: venasaur },
+		{ name: 'Squirtle', src: squirtle },
+		{ name: 'Watortle', src: wartortle },
+		{ name: 'Blastoise', src: blastoise },
+		{ name: 'Charmander', src: charmander },
+		{ name: 'Charmeleon', src: charmeleon },
+		{ name: 'Charizard', src: charizard },
+		{ name: 'Dratini', src: dratini },
+		{ name: 'Dragonair', src: dragonair },
+		{ name: 'Dragonite', src: dragonite },
+	];
+
+	const shuffle = (array) => {
+		let currentIndex = array.length;
+		let randomIndex;
+
+		while (currentIndex !== 0) {
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex--;
+
+			[array[currentIndex], array[randomIndex]] = [
+				array[randomIndex],
+				array[currentIndex],
+			];
+		}
+		return array;
 	};
 
-	const resetScore = () => {
-		setScore(0);
+	const gameLogic = (clickedName) => {
+		if (clickedArray.includes(clickedName)) {
+			setClickedArray([]);
+			setScore(0);
+		} else {
+			setClickedArray([...clickedArray, clickedName]);
+			setScore(score + 1);
+		}
 	};
 
 	return (
@@ -32,114 +70,18 @@ const Cards = () => {
 				<div id="bestScore">Best score: {best}</div>
 			</div>
 			<div id="gameBoard">
-				<Pokemon
-					name="Bulbasaur"
-					src={bulbasaur}
-					incrementScore={incrementScore}
-					resetScore={resetScore}
-					score={score}
-					best={best}
-					setBest={setBest}
-				/>
-				<Pokemon
-					name="Ivysaur"
-					src={ivysaur}
-					incrementScore={incrementScore}
-					resetScore={resetScore}
-					score={score}
-					best={best}
-					setBest={setBest}
-				/>
-				<Pokemon
-					name="Venasaur"
-					src={venasaur}
-					incrementScore={incrementScore}
-					resetScore={resetScore}
-					score={score}
-					best={best}
-					setBest={setBest}
-				/>
-				<Pokemon
-					name="Squirtle"
-					src={squirtle}
-					incrementScore={incrementScore}
-					resetScore={resetScore}
-					score={score}
-					best={best}
-					setBest={setBest}
-				/>
-				<Pokemon
-					name="Wartortle"
-					src={wartortle}
-					incrementScore={incrementScore}
-					resetScore={resetScore}
-					score={score}
-					best={best}
-					setBest={setBest}
-				/>
-				<Pokemon
-					name="Blastoise"
-					src={blastoise}
-					incrementScore={incrementScore}
-					resetScore={resetScore}
-					score={score}
-					best={best}
-					setBest={setBest}
-				/>
-				<Pokemon
-					name="Charmander"
-					src={charmander}
-					incrementScore={incrementScore}
-					resetScore={resetScore}
-					score={score}
-					best={best}
-					setBest={setBest}
-				/>
-				<Pokemon
-					name="Charmeleon"
-					src={charmeleon}
-					incrementScore={incrementScore}
-					resetScore={resetScore}
-					score={score}
-					best={best}
-					setBest={setBest}
-				/>
-				<Pokemon
-					name="Charizard"
-					src={charizard}
-					incrementScore={incrementScore}
-					resetScore={resetScore}
-					score={score}
-					best={best}
-					setBest={setBest}
-				/>
-				<Pokemon
-					name="Dratini"
-					src={dratini}
-					incrementScore={incrementScore}
-					resetScore={resetScore}
-					score={score}
-					best={best}
-					setBest={setBest}
-				/>
-				<Pokemon
-					name="Dragonair"
-					src={dragonair}
-					incrementScore={incrementScore}
-					resetScore={resetScore}
-					score={score}
-					best={best}
-					setBest={setBest}
-				/>
-				<Pokemon
-					name="Dragonite"
-					src={dragonite}
-					incrementScore={incrementScore}
-					resetScore={resetScore}
-					score={score}
-					best={best}
-					setBest={setBest}
-				/>
+				{shuffle(pokemonArray).map((pokemon, key) => {
+					return (
+						<Pokemon
+							name={pokemon.name}
+							src={pokemon.src}
+							key={key}
+							gameLogic={(clickedName) => {
+								gameLogic(clickedName);
+							}}
+						/>
+					);
+				})}
 			</div>
 		</div>
 	);
